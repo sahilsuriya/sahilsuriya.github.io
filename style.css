@@ -8,34 +8,37 @@ body, h1, h2, p, ul {
 
 /* Set a background color and font for the body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto Mono', monospace; /* Use a monospaced font for a coding vibe */
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #222; /* Dark background for a coding feel */
+    color: #eee; /* Light color for text */
     padding: 20px;
 }
 
 /* Header styles */
 header {
-    background: #007BFF;
-    color: white;
+    background: #333; /* Slightly lighter dark color for header */
+    color: #eee;
     padding: 20px;
     text-align: center;
     border-radius: 8px;
+    margin-bottom: 20px; /* Add some spacing between header and content */
 }
 
 /* Section styles */
 section {
-    background: white;
+    background: #111; /* Darker background for sections */
     margin: 20px 0;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to highlight sections */
 }
 
 /* Heading styles */
 h1 {
     font-size: 2.5em;
+    font-weight: bold;
+    color: #007BFF; /* Bright blue for important headings */
 }
 
 h2 {
@@ -47,6 +50,7 @@ h2 {
 /* List styles */
 ul {
     list-style-type: none;
+    padding-left: 20px; /* Indent list items for readability */
 }
 
 ul li {
@@ -64,8 +68,7 @@ a:hover {
 }
 
 /* Footer styles */
-footer {
-    text-align: center;
+footer { text-align: center;
     margin-top: 20px;
     font-size: 0.9em;
     color: #777;
@@ -85,3 +88,23 @@ footer {
         font-size: 1.5em;
     }
 }
+
+/* Code block styles */
+pre {
+    background: #333; /* Dark background for code blocks */
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto; /* Allow horizontal scrolling for long lines */
+}
+
+/* JavaScript for interactive elements */
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const projectLinks = document.querySelectorAll('section ul li a');
+        projectLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                alert('You are about to view: ' + this.textContent);
+            });
+        });
+    });
+</script>
