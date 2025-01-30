@@ -1,110 +1,85 @@
-/* style.css */
-
-/* Reset some default styles */
-body, h1, h2, p, ul {
+body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-/* Set a background color and font for the body */
-body {
-    font-family: 'Roboto Mono', monospace; /* Use a monospaced font for a coding vibe */
-    line-height: 1.6;
-    background-color: #222; /* Dark background for a coding feel */
-    color: #eee; /* Light color for text */
-    padding: 20px;
-}
-
-/* Header styles */
 header {
-    background: #333; /* Slightly lighter dark color for header */
-    color: #eee;
-    padding: 20px;
+    background-color: #222;
+    color: white;
     text-align: center;
-    border-radius: 8px;
-    margin-bottom: 20px; /* Add some spacing between header and content */
+    padding: 40px 20px;
 }
 
-/* Section styles */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 10px;
+    border: 3px solid #fff;
+}
+
 section {
-    background: #111; /* Darker background for sections */
-    margin: 20px 0;
+    width: 80%;
+    margin: 20px auto;
+    background: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to highlight sections */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Heading styles */
-h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #007BFF; /* Bright blue for important headings */
+.project {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
 }
 
-h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: #007BFF;
+.project:hover {
+    transform: scale(1.05);
 }
 
-/* List styles */
-ul {
-    list-style-type: none;
-    padding-left: 20px; /* Indent list items for readability */
+.project img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    margin-right: 20px;
 }
 
-ul li {
-    margin: 10px 0;
+.skill {
+    margin: 15px 0;
 }
 
-/* Link styles */
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Footer styles */
-footer { text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #777;
-}
-
-/* Responsive design */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-}
-
-/* Code block styles */
-pre {
-    background: #333; /* Dark background for code blocks */
-    padding: 10px;
+.skill-bar {
+    background: #ddd;
     border-radius: 5px;
-    overflow-x: auto; /* Allow horizontal scrolling for long lines */
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
+    position: relative;
 }
 
-/* JavaScript for interactive elements */
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const projectLinks = document.querySelectorAll('section ul li a');
-        projectLinks.forEach(link => {
-            link.addEventListener('click', function(event) {
-                alert('You are about to view: ' + this.textContent);
-            });
-        });
-    });
-</script>
+.skill-fill {
+    background: #28a745;
+    height: 20px;
+    line-height: 20px;
+    color: white;
+    font-size: 14px;
+    padding-right: 5px;
+    text-align: right;
+    transition: width 2s ease-in-out;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    margin-top: 30px;
+}
