@@ -128,8 +128,9 @@ h2 {
 
 .skill-fill {
     background: #28a745; /* Green */
+    background-color: #4CAF50;
     height: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     width: 0%; /* Initial width */
     transition: width 1s ease-in-out; /* Smooth animation */
     position: absolute;
